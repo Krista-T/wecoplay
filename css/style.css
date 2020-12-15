@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@600;700&display=swap');
-
-
 /* main variables */
 :root {
     --bg-color: #f3f2f3;
@@ -14,68 +11,14 @@
     --secondary-text-color: #fff;
 }
 
-body {
-    margin: 0;
-    background-color: var(--bg-green);
-    font-family: var(--copy-font);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: flex;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 /* BACKGROUND HEADER */
-
-#wave-container img {
-    width: 100%;
-    min-height: 90vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-}
-
-/* HEADER */
 
 .background_image {
     background-size: cover;
     background-repeat: no-repeat;
     background: brown;
-    padding: 20px;
+    padding: 30px 60px;
     padding-bottom: 0;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-weight: bolder;
-}
-
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: var(--font-size-button);
-    padding: 0;
-}
-
-nav li {
-    list-style: none;
-    padding: 8px 12px;
-    text-transform: uppercase;
-}
-
-nav li a {
-    text-decoration: none;
-    color: var(--secondary-text-color);
 }
 
 
@@ -112,15 +55,31 @@ nav li a {
     margin: auto;
 }
 
+.txt h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+
 h1,
-h2 {
+h2,
+h3 {
+    font-family: var(--headline-font);
+}
+
+h1,
+h2,
+h3,
+h4 {
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 .hero-btn,
 .hero {
     text-align: center;
+    margin: auto;
 }
 
 
@@ -131,33 +90,43 @@ h2 {
 #card-container p {
     color: black;
     text-align: left;
+    text-align: justify;
 }
 
 /* 3 CARDS, flex */
 
 #card-container {
-    margin-top: 70px;
+    margin: 30px;
+}
+
+h2,
+h3 {
+    text-align: center;
 }
 
 .card-one,
 .card-two,
 .card-three {
-    max-width: 300px;
-    min-height: 150px;
-    padding: 10px;
-    margin: 20px auto;
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px;
+    padding: 35px;
+    margin: 50px auto;
     /**CHANGE COLOR; ADD SHADOW FINAL DESIG?**/
-    background-color: rgb(243, 242, 242);
+    background-color: #FFFFFF;
     position: relative;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
+    box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
 }
 
-.card-one img {
-    max-width: 70px;
+#card-container img {
+    max-width: 60px;
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: 50%;
     transform: translate(-50%);
-
 }
 
 /* VIDEO SECTION */
@@ -165,7 +134,10 @@ h2 {
 #video-container {
     background-color: teal;
     padding: 20px;
+}
 
+.video iframe {
+    width: -webkit-fill-available;
 }
 
 .video-txt {
@@ -174,30 +146,25 @@ h2 {
     margin: auto;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
+@media (min-width: 960px) {
+    .background_image {
+        background: url(/img/hero-img.svg);
+        margin-bottom: 140px;
+    }
 
-footer img {
-    max-width: 80px;
-}
-
-footer p {
-    color: black;
+    .hero img {
+        position: relative;
+        bottom: -100px;
+    }
 }
 
 @media (min-width: 700px) {
 
-    .background_image {
-        background: url(img/front_page_header.jpg);
-    }
-
     #card-container {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .card-one,
@@ -212,13 +179,12 @@ footer p {
         align-items: center;
     }
 
+    .video iframe {
+        width: 560px;
+    }
+
     .video-txt {
         margin: 20px;
     }
 
-    #footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
 }
