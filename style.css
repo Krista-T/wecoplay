@@ -38,9 +38,10 @@ body{
   color: white;
 }
 
-.btn button{
+/* ALL BUTTONS SAME */
+.btn button, .hero-btn button{
   border: none;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   padding: 3px;
   text-align: center;
   text-transform: uppercase;
@@ -54,7 +55,7 @@ body{
   margin-top: 75px;
 }
 
-#hero h1, p {
+#hero h1, p, .hero-btn {
   grid-area: 1/1/1/1;
   /*CHANGE TO VAR COLORS*/
   color: white;
@@ -69,13 +70,13 @@ h1{
   text-transform: uppercase;
 }
 .txt {
-  margin-left:7.5%;
-  
+  margin-left:7.5%; 
 }
 
-.hero {
+.hero-btn, .hero {
   text-align: center;
 }
+
 
 
 
