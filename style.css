@@ -1,0 +1,33 @@
+/** ADD CSS VARIABLES FONT, COLORS **/
+
+body{
+  margin: 0;
+}
+#wave-container img{
+  margin:0;
+  width: 100%;
+}
+
+.logo {
+  position: relative;
+  margin-left: 3%;
+  margin-top: -30%; 
+}
+.logo img {
+  max-width: 10%;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row; 
+  position: absolute; 
+  top:5px;
+  right:3%;
+}
+
+#nav li {
+  list-style: none;
+  padding: 5px;  
+}
+
+  
