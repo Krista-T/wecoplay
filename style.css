@@ -99,19 +99,76 @@ h1, h2 {
 
 /* 3 CARDS, flex */
 #card-container{
- 
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  /* justify-content: center; */
+ 
  
 }
 
  .card-one, .card-two, .card-three {
   max-width: 20%;
+  padding: 10px;
 /**CHANGE COLOR; ADD SHADOW FINAL DESIG?**/
-  border: .5px solid grey;
- padding: 20px;
- background-color: grey;
- 
+ background-color: rgb(243, 242, 242);
 }
+
+/* VIDEO SECTION */
+
+#video-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  /* gap: 50px; */
+  margin-top: 75px;
+  background-color: teal;
+  
+}
+
+.video {
+  grid-area: 1/1/1/1; 
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+ .video-txt {
+  grid-area: 1/2/1/2;
+  /*CHANGE TO VAR COLORS*/
+  color: white;
+  margin-top: 25px;  
+}
+
+
+
+#container {
+  position: relative;
+  max-height: 100vw;
+}
+
+footer {
+  margin-bottom:0;
+  width: 100%; 
+  text-align: center;  
+}
+
+#footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+footer img {
+  max-width: 20%;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+footer p {
+  color: black;
+  text-align: left;
+}
+
