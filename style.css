@@ -1,7 +1,21 @@
-/** ADD CSS VARIABLES FONT, COLORS **/
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@600;700&display=swap');
+
+
+/* main variables */
+:root {
+  --bg-color:#f3f2f3;
+  --btn-green: #13a867;
+  --hero-filter: #f6c026;
+  --midsection-filter:#13a867;
+  --headline-font:font-family: 'Poppins', sans-serif;
+  --copy-font:font-family: 'Nunito', sans-serif; 
+  --main-text-color: #000;
+  --secondary-text-color: #fff;
+}
 
 body {
   margin: 0;
+  background-color: var(--bg-green);
 }
 
 #wave-container img {
@@ -36,46 +50,48 @@ body {
 
 #nav li a {
   text-decoration: none;
-  /*COLOR CHANGE TO VAR*/
-  color: white;
+  font-family:Nunito, sans-serif; 
+ color:var(--secondary-text-color);
 }
+
 
 /* ALL BUTTONS SAME */
 .btn button,
 .hero-btn button {
   border: none;
-  /* border-radius: 15px; */
+background-color: var(--btn-green);
   padding: 3px;
   text-align: center;
   text-transform: uppercase;
 }
 
 /* HERO SECTION, grid layout */
-#hero {
+ #hero {
   display: grid;
   grid-template-columns: 44% auto;
   grid-template-rows: auto;
   gap: 30px;
-  margin-top: 0;
-  
+  margin-top: -25%; 
 }
 
-#hero h1,
-p,
-.hero-btn {
-  grid-area: 1/1/1/1;
+ .txt h1, p, button {
+   grid-area: 1/1/1/1;
+  left: 5%;
+ 
   /*CHANGE TO VAR COLORS*/
-  color: white;
-}
+   color: white;
+} 
 
-#hero .hero img {
-  grid-area: 1/2/1/2;
-  max-width: 100%;
-}
+  #hero .hero img {
+    grid-area: 1/2/1/2;
+}  
 
 h1, h2 {
+  font-size: 2rem;
   text-transform: uppercase;
 }
+
+
 
 .txt {
   margin-left: 7.5%;
@@ -84,14 +100,14 @@ h1, h2 {
 .hero-btn,
 .hero {
   text-align: center;
-}
+} 
 
 
 .focus{
   text-align: center;
-  margin-top: 55px;
-  margin-left: 350px;
-  margin-right: 350px;
+  margin-top: 80px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 .focus p, #card-container p {
   color: black;
@@ -106,14 +122,19 @@ h1, h2 {
   justify-content: space-evenly;
   /* justify-content: center; */
  
- 
 }
 
  .card-one, .card-two, .card-three {
-  max-width: 20%;
+  max-width: 15%;
+  height: 20 0px;
   padding: 10px;
 /**CHANGE COLOR; ADD SHADOW FINAL DESIG?**/
  background-color: rgb(243, 242, 242);
+}
+
+.card-one img {
+  max-width: 35%;
+  
 }
 
 /* VIDEO SECTION */
