@@ -1,10 +1,11 @@
 /** ADD CSS VARIABLES FONT, COLORS **/
 
-body{
+body {
   margin: 0;
 }
-#wave-container img{
-  margin:0;
+
+#wave-container img {
+  margin: 0;
   width: 100%;
 }
 
@@ -12,34 +13,36 @@ body{
 .logo {
   position: relative;
   margin-left: 3%;
-  margin-top: -30%; 
+  margin-top: -30%;
 }
+
 .logo img {
   max-width: 5%;
 }
 
 #nav {
   display: flex;
-  flex-direction: row; 
-  position: absolute; 
-  top:5px;
-  right:3%;
+  flex-direction: row;
+  position: absolute;
+  top: 5px;
+  right: 3%;
 }
 
 #nav li {
   list-style: none;
-  padding: 7px; 
-  text-transform: uppercase; 
+  padding: 7px;
+  text-transform: uppercase;
 }
 
-#nav li a{
+#nav li a {
   text-decoration: none;
   /*COLOR CHANGE TO VAR*/
   color: white;
 }
 
 /* ALL BUTTONS SAME */
-.btn button, .hero-btn button{
+.btn button,
+.hero-btn button {
   border: none;
   /* border-radius: 15px; */
   padding: 3px;
@@ -52,33 +55,63 @@ body{
   display: grid;
   grid-template-columns: 44% auto;
   grid-template-rows: auto;
+  gap: 50px;;
   margin-top: 75px;
 }
 
-#hero h1, p, .hero-btn {
+#hero h1,
+p,
+.hero-btn {
   grid-area: 1/1/1/1;
   /*CHANGE TO VAR COLORS*/
   color: white;
 }
 
 #hero .hero img {
-  grid-area: 1/2/1/2; 
+  grid-area: 1/2/1/2;
   max-width: 100%;
 }
 
-h1{
+h1, h2 {
   text-transform: uppercase;
 }
+
 .txt {
-  margin-left:7.5%; 
+  margin-left: 7.5%;
 }
 
-.hero-btn, .hero {
+.hero-btn,
+.hero {
   text-align: center;
 }
 
 
+.focus{
+  text-align: center;
+  margin-top: 55px;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+.focus p, #card-container p {
+  color: black;
+  text-align: left;
+}
 
+/* 3 CARDS, flex */
+#card-container{
+ 
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
 
-
-  
+ .card-one, .card-two, .card-three {
+  max-width: 20%;
+/**CHANGE COLOR; ADD SHADOW FINAL DESIG?**/
+  border: .5px solid grey;
+ padding: 20px;
+ background-color: grey;
+ 
+}
