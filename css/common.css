@@ -47,14 +47,23 @@ nav li a {
 
 /* FOOTER */
 
+footer {
+    background-image: url("/img/footwave.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 550px;
+   
+}
+
 #footer-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+   
 }
 
 #footer-container > div {
-    margin: 20px;
+    margin: 150px;
 }
 
 footer img {
@@ -63,11 +72,10 @@ footer img {
 
 footer p {
     color: black;
-}
-
-footer p:not(#footer-container p) {
     text-align: center;
 }
+
+*
 
 footer ul {
     list-style: none;
@@ -75,7 +83,7 @@ footer ul {
 }
 
 footer .fa {
-    font-size: 15px;
+    font-size: 24px;
     margin-right: 10px;
 }
 
@@ -88,6 +96,11 @@ footer .fa {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+
+    footer .fa {
+        font-size: 18px;
+        
     }
 }
 
