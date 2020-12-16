@@ -1,0 +1,74 @@
+:root {
+    --background-colour: #2F18F5;
+    --accent-colour: #F2A71B;
+}
+
+/* FILTERS */
+.categories {
+    background: var(--background-colour);
+    border-radius: 2px;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+.categories button {
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    width: 290px;
+    padding: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.active {
+    background: var(--accent-colour) !important;
+}
+
+/* GAMES */
+.box_container {
+    background: #2F18F5;
+    width: 300px;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.box_container h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 600px) {
+
+    .categories {
+        max-width: 980px;
+    }
+
+    .categories button {
+        width: 150px;
+    }
+
+    .box_container {
+        margin: 20px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    main .box_container:last-child {
+        justify-content: flex-start;
+    }
+}
