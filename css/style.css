@@ -172,7 +172,7 @@ h3 {
 
 @media (min-width: 1053px) {
     .background_image {
-        background: url("/img/hero-img.svg");
+        background: url("img/hero-img.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 640px;
