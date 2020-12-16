@@ -151,6 +151,10 @@ h3 {
 #companies img{
     max-width: 50%;
 }
+
+#companies h2{
+    text-transform: none;
+}
 #companies ul li {
     list-style-type: none;
     margin: 35px 0;
