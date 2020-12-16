@@ -1,6 +1,67 @@
 :root {
     --background-colour: #2F18F5;
     --accent-colour: #F2A71B;
+    --button-border-radius: 4px;
+
+    --headline-font: 'Poppins', sans-serif;
+    --copy-font: 'Nunito', sans-serif;
+}
+
+/* HEADER */
+.header_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.header_container img,
+.inner_box {
+    max-width: 400px;
+}
+
+.inner_box h1 {
+    font-family: var(--headline-font);
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+
+.inner_box p {
+    font-weight: 100;
+}
+
+.inner_box button {
+    outline: none;
+    border: none;
+    padding: 8px 12px;
+    background: none;
+    border-radius: var(--button-border-radius);
+    width: 150px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.inner_box button:first-of-type {
+    border: 1px solid var(--accent-colour);
+}
+
+.inner_box button:first-of-type:hover {
+    background: var(--accent-colour);
+    color: white;
+}
+
+.inner_box button:last-of-type {
+    background: var(--accent-colour);
+    color: white;
+}
+
+.inner_box button:last-of-type:hover {
+    color: black;
+    background: none;
+    border: 1px solid var(--accent-colour);
 }
 
 /* FILTERS */
@@ -9,7 +70,8 @@
     border-radius: 2px;
     text-align: center;
     max-width: 300px;
-    margin: auto;
+    margin: 20px auto;
+    margin-bottom: 0;
 }
 
 .categories button {
@@ -49,7 +111,7 @@
 @media (min-width: 600px) {
 
     .categories {
-        max-width: 980px;
+        max-width: 982px;
     }
 
     .categories button {
