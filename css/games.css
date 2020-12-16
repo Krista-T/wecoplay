@@ -8,16 +8,35 @@
 }
 
 /* HEADER */
+.background_hero {
+    background: var(--background-colour);
+    padding: 20px;
+    color: white;
+    padding: 30px 60px;
+    padding-bottom: 0;
+}
+
 .header_container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: auto;
+    padding: 20px;
 }
 
 .header_container img,
 .inner_box {
-    max-width: 400px;
+    max-width: 566px;
+}
+
+.btn {
+    background: var(--accent-colour);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: none;
+    border: 1px solid var(--accent-colour);
 }
 
 .inner_box h1 {
@@ -42,10 +61,12 @@
     width: 150px;
     cursor: pointer;
     margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 .inner_box button:first-of-type {
     border: 1px solid var(--accent-colour);
+    color: white;
 }
 
 .inner_box button:first-of-type:hover {
@@ -59,7 +80,7 @@
 }
 
 .inner_box button:last-of-type:hover {
-    color: black;
+    color: white;
     background: none;
     border: 1px solid var(--accent-colour);
 }
@@ -108,6 +129,16 @@
 
 
 /* MEDIA QUERIES */
+
+@media (min-width: 1400px) {
+    .background_hero {
+        background: url("/img/games_bg_header.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+    }
+}
+
 @media (min-width: 600px) {
 
     .categories {
