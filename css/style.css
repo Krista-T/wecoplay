@@ -16,10 +16,12 @@
 .background_image {
     background-size: cover;
     background-repeat: no-repeat;
-    background: brown;
+    /* background: brown; */
+    background: var(--hero-filter);
     padding: 30px 60px;
     padding-bottom: 0;
 }
+
 
 
 /* ALL BUTTONS SAME */
@@ -40,9 +42,12 @@
 .hero-btn button {
     margin-bottom: 20px;
 }
+.btn:hover,
+ button:hover {
+    transform: scale(1.1);
+  }
 
-
-/* HERO SECTION, grid layout */
+/* HERO SECTION*/
 #hero {
     display: flex;
     justify-content: space-between;
@@ -94,7 +99,6 @@ h4 {
 }
 
 /* 3 CARDS, flex */
-
 #card-container {
     margin: 30px;
 }
@@ -127,41 +131,51 @@ h3 {
     top: -30px;
     left: 50%;
     transform: translate(-50%);
+    background-color: #f3f2f3;
+    border-radius: 50%;
 }
 
 /* VIDEO SECTION */
 
 #video-container {
-    background-color: teal;
-    padding: 20px;
+    /* background-image: url("/img/home-midbck-img.svg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: var(--midsection-filter);
+    padding: 10px;
 }
 
+
 .video iframe {
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available; */
+    max-width: 100%;
 }
 
 .video-txt {
     color: var(--secondary-text-color);
     max-width: 400px;
     margin: auto;
+
 }
 
 /* COMPANIES SECTION */
 
-#companies img{
+#companies img {
     max-width: 50%;
 }
 
-#companies h2{
+#companies h2 {
     text-transform: none;
 }
+
 #companies ul li {
     list-style-type: none;
     margin: 35px 0;
     padding: 10px;
 }
 
-.first-row, .second-row{
+.first-row,
+.second-row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -172,13 +186,21 @@ h3 {
 
 @media (min-width: 960px) {
     .background_image {
-        background: url(/img/hero-img.svg);
+        background: url("/img/hero-img.svg");
+        background-repeat: no-repeat;
         margin-bottom: 140px;
+
     }
 
     .hero img {
         position: relative;
         bottom: -100px;
+    }
+
+    #video-container {
+        background-image: url("/img/home-midbck-img.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -201,6 +223,7 @@ h3 {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        padding: 10px;
     }
 
     .video iframe {
@@ -211,8 +234,8 @@ h3 {
         margin: 20px;
     }
 
-    #companies img{
-        max-width: 30%;
+    #companies img {
+        max-width: 50%;
     }
 
 }
