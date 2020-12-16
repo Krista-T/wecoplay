@@ -42,7 +42,10 @@
 .hero-btn button {
     margin-bottom: 20px;
 }
-
+.btn:hover,
+ button:hover {
+    transform: scale(1.1);
+  }
 
 /* HERO SECTION*/
 #hero {
