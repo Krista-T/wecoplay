@@ -13,14 +13,14 @@
 
 /* BACKGROUND HEADER */
 
- .background_image {
+.background_image {
     background-size: cover;
     background-repeat: no-repeat;
     /* background: brown; */
-   background: var( --hero-filter);
+    background: var(--hero-filter);
     padding: 30px 60px;
     padding-bottom: 0;
-} 
+}
 
 
 
@@ -46,7 +46,7 @@
 
 /* HERO SECTION*/
 #hero {
-     display: flex;  
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     color: var(--secondary-text-color);
@@ -144,34 +144,35 @@ h3 {
 
 
 .video iframe {
-    width: -webkit-fill-available;
-    margin-top: 20px;
-    
+    /* width: -webkit-fill-available; */
+    max-width: 100%;
 }
 
 .video-txt {
     color: var(--secondary-text-color);
-    max-width: 400px; 
+    max-width: 400px;
     margin: auto;
-    
+
 }
 
 /* COMPANIES SECTION */
 
-#companies img{
+#companies img {
     max-width: 50%;
 }
 
-#companies h2{
+#companies h2 {
     text-transform: none;
 }
+
 #companies ul li {
     list-style-type: none;
     margin: 35px 0;
     padding: 10px;
 }
 
-.first-row, .second-row{
+.first-row,
+.second-row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -185,7 +186,7 @@ h3 {
         background: url("/img/hero-img.svg");
         background-repeat: no-repeat;
         margin-bottom: 140px;
-       
+
     }
 
     .hero img {
@@ -227,10 +228,10 @@ h3 {
     }
 
     .video-txt {
-        margin: 20px;  
+        margin: 20px;
     }
 
-    #companies img{
+    #companies img {
         max-width: 50%;
     }
 
