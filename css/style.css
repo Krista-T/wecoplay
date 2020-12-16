@@ -13,13 +13,15 @@
 
 /* BACKGROUND HEADER */
 
-.background_image {
+ .background_image {
     background-size: cover;
     background-repeat: no-repeat;
-    background: brown;
+    /* background: brown; */
+   background: var( --hero-filter);
     padding: 30px 60px;
     padding-bottom: 0;
-}
+} 
+
 
 
 /* ALL BUTTONS SAME */
@@ -42,9 +44,9 @@
 }
 
 
-/* HERO SECTION, grid layout */
+/* HERO SECTION*/
 #hero {
-    display: flex;
+     display: flex;  
     justify-content: space-between;
     flex-wrap: wrap;
     color: var(--secondary-text-color);
@@ -94,7 +96,6 @@ h4 {
 }
 
 /* 3 CARDS, flex */
-
 #card-container {
     margin: 30px;
 }
@@ -127,23 +128,32 @@ h3 {
     top: -30px;
     left: 50%;
     transform: translate(-50%);
+    background-color: #f3f2f3;
+    border-radius: 50%;
 }
 
 /* VIDEO SECTION */
 
 #video-container {
-    background-color: teal;
-    padding: 20px;
+    /* background-image: url("/img/home-midbck-img.svg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: var(--midsection-filter);
+    padding: 10px;
 }
+
 
 .video iframe {
     width: -webkit-fill-available;
+    margin-top: 20px;
+    
 }
 
 .video-txt {
     color: var(--secondary-text-color);
-    max-width: 400px;
+    max-width: 400px; 
     margin: auto;
+    
 }
 
 /* COMPANIES SECTION */
@@ -172,13 +182,21 @@ h3 {
 
 @media (min-width: 960px) {
     .background_image {
-        background: url(/img/hero-img.svg);
+        background: url("/img/hero-img.svg");
+        background-repeat: no-repeat;
         margin-bottom: 140px;
+       
     }
 
     .hero img {
         position: relative;
         bottom: -100px;
+    }
+
+    #video-container {
+        background-image: url("/img/home-midbck-img.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -201,6 +219,7 @@ h3 {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        padding: 10px;
     }
 
     .video iframe {
@@ -208,11 +227,11 @@ h3 {
     }
 
     .video-txt {
-        margin: 20px;
+        margin: 20px;  
     }
 
     #companies img{
-        max-width: 30%;
+        max-width: 50%;
     }
 
 }
