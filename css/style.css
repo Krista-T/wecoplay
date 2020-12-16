@@ -2,13 +2,8 @@
 :root {
     --bg-color: #f3f2f3;
     --btn-green: #13a867;
-    --font-size-button: 15px;
     --hero-filter: #f6c026;
     --midsection-filter: #13a867;
-    --headline-font: 'Poppins', sans-serif;
-    --copy-font: 'Nunito', sans-serif;
-    --main-text-color: #000;
-    --secondary-text-color: #fff;
 }
 
 /* BACKGROUND HEADER */
@@ -16,12 +11,10 @@
 .background_image {
     background-size: cover;
     background-repeat: no-repeat;
-    /* background: brown; */
     background: var(--hero-filter);
     padding: 30px 60px;
     padding-bottom: 0;
 }
-
 
 
 /* ALL BUTTONS SAME */
@@ -42,10 +35,11 @@
 .hero-btn button {
     margin-bottom: 20px;
 }
+
 .btn:hover,
- button:hover {
+button:hover {
     transform: scale(1.1);
-  }
+}
 
 /* HERO SECTION*/
 #hero {
@@ -94,7 +88,6 @@ h4 {
 
 #card-container p {
     color: black;
-    text-align: left;
     text-align: justify;
 }
 
@@ -184,12 +177,13 @@ h3 {
 
 
 
-@media (min-width: 960px) {
+@media (min-width: 1053px) {
     .background_image {
         background: url("/img/hero-img.svg");
         background-repeat: no-repeat;
-        margin-bottom: 140px;
-
+        background-size: cover;
+        height: 640px;
+        margin-bottom: 100px;
     }
 
     .hero img {
