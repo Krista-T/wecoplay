@@ -64,13 +64,13 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: var(--headline-font);
 }
 
 h1,
 h2,
-h3,
 h4 {
     text-transform: uppercase;
     font-weight: 900;
@@ -146,6 +146,30 @@ h3 {
     margin: auto;
 }
 
+/* COMPANIES SECTION */
+
+#companies img{
+    max-width: 50%;
+}
+
+#companies h2{
+    text-transform: none;
+}
+#companies ul li {
+    list-style-type: none;
+    margin: 35px 0;
+    padding: 10px;
+}
+
+.first-row, .second-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
 @media (min-width: 960px) {
     .background_image {
         background: url(/img/hero-img.svg);
@@ -185,6 +209,10 @@ h3 {
 
     .video-txt {
         margin: 20px;
+    }
+
+    #companies img{
+        max-width: 30%;
     }
 
 }
