@@ -3,7 +3,7 @@
     --bg-color: #f3f2f3;
     /* --btn-green: #13a867; */
     --accent-colour: #13a867;
-    --hero-filter: #f6c026;
+    --home-filter: #f6c026;
     --midsection-filter: #13a867;
     --button-border-radius: 4px;
 
@@ -18,7 +18,7 @@
 .background_image {
     background-size: cover;
     background-repeat: no-repeat;
-    background: var(--hero-filter);
+    background: var(--home-filter);
     padding: 30px 60px;
     padding-bottom: 0;
 }

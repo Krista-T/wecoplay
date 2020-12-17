@@ -9,6 +9,13 @@
     --copy-font: 'Nunito', sans-serif;
     --main-text-color: #000;
     --secondary-text-color: #fff;
+
+    /*DIFFERENT COLORS ON HOVER??
+     --home-filter: #f6c026;
+    --games-filter: #2F18F5;
+    --works-filter: #8A0FF2;
+    --contact-filter:  #f3f2f3;
+    --posters-filter: #13a867; */
 }
 
 body {
@@ -52,14 +59,23 @@ nav ul {
 
 nav li {
     list-style: none;
-    padding: 8px 12px;
+    padding: 8px 12px; 
     text-transform: uppercase;
 }
 
 nav li a {
     text-decoration: none;
     color: var(--secondary-text-color);
-    font-weight: bolder;
+    font-weight: bolder; 
+   
+}
+
+/* NAVIGATION ON HOVER */
+
+ nav li a:hover {
+     color: #8A0FF2;
+     /* font-size: 16px; */
+    
 }
 
 /* FOOTER */
