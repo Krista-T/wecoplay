@@ -43,15 +43,14 @@ categories.forEach(category => {
         fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/categories")
             .then(res => res.json())
             .then(showCategory);
-        // console.log(category);
+        // console.log(category); 
+       
     })
+
     function showCategory(cat) {
-        // console.log(cat);
+         console.log(cat);
         cat.forEach(subject => {
-              console.log(subject.name);
-           
-            //if game has filter word 
-           
+              console.log(subject.slug);         
         })
        
     }
