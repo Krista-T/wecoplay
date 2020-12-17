@@ -13,6 +13,12 @@
 .btn {
     color: white;
     background: var(--accent-colour);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: none;
+    border: 1px solid var(--accent-colour);
 }
 
 

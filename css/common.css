@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap');
 
 :root {
+    --font-size-text: 14px;
     --font-size-button: 15px;
+    --font-size-title: 40px;
+
     --headline-font: 'Poppins', sans-serif;
     --copy-font: 'Nunito', sans-serif;
     --main-text-color: #000;
