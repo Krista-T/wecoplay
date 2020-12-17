@@ -74,8 +74,9 @@ nav li a {
 /* NAVIGATION ON HOVER */
 
  nav li a:hover {
-     color: #8A0FF2;
-     transition: color .8s;
+    /* color: #AB191A; */
+    color: #75be9d;
+    transition: color .8s;
 }
 
 /* FOOTER */
