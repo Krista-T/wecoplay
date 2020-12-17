@@ -11,15 +11,15 @@ function getGames() {
 
 // start to divide the data
 function processData(data) {
-    console.log("here are the games");
-    console.log(data);
+    // console.log("here are the games");
+    //  console.log(data);
     data.forEach(retrieveSingleGame);
 }
 
 // call in each single game and do magical things
 function retrieveSingleGame(gameDivision) {
-    console.log(gameDivision);
-    console.log("hey game");
+    // console.log(gameDivision);
+    // console.log("hey game");
 
     const template = document.querySelector("#games").content;
     const clone = template.cloneNode(true);
@@ -31,4 +31,27 @@ function retrieveSingleGame(gameDivision) {
 
     // append child
     document.querySelector("main").appendChild(clone);
+
 }
+
+
+    //filters
+   let categories =  document.querySelectorAll(".categories button"); 
+
+  categories.forEach(category => {addEventListener("click", () => {
+    fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/categories")
+      .then(res => res.json())
+      .then(showFilter);  
+      console.log(category);
+  })
+
+  }) ;
+
+      function showFilter(categories){
+console.log(categories[0].slug);
+      }
+
+
+
+
+
