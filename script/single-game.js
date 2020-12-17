@@ -2,8 +2,6 @@ window.addEventListener("DOMContentLoaded", getData);
 
 const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?_embed&per_page=20";
 
-//const gameID = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/" + the_game_id + "?_embed";
-
 function getData() {
     const urlParams = new URLSearchParams(window.location.search);
     console.log("URLSearchParams " + window.location);
@@ -12,8 +10,9 @@ function getData() {
 
     if (true) {
         fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/25?_embed")
+            //        fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/" + the_game_id + "?_embed")
             .then(res => res.json())
-            .then(showGame);
+            .then(stuffReceived);
     } else {
         fetch(gamesInfo)
             .then(res => res.json())
@@ -24,12 +23,27 @@ function getData() {
 function handleData(games) {
     console.log("games?");
     console.log(games);
+}
 
+function stuffReceived(stuff) {
+    showGame(stuff);
+    createImages(stuff);
+}
+
+function createImages(lan) {
+    console.log(lan);
+    console.log("languages here");
+    lan.languages.forEach((lang) => {
+        console.log(lang.guid);
+        console.log("here it is");
+        const lan_img = document.createElement("img");
+        lan_img.src = lang.guid;
+        document.querySelector(".languages").appendChild(lan_img);
+    })
 }
 
 function showGame(game) {
     console.log(game);
-    console.log("FUCK MIT LIV");
 
     const template = document.querySelector("#single_game").content;
     const clone = template.cloneNode(true);
@@ -44,12 +58,12 @@ function showGame(game) {
 
     const longDescription = clone.querySelector(".long_description p");
     longDescription.innerHTML = game.content.rendered;
-    const denmark = game.languages[0].guid;
-    clone.querySelector(".inner_details .denmark").src = denmark;
-    const germany = game.languages[1].guid;
-    clone.querySelector(".inner_details .germany").src = germany;
-    const norway = game.languages[2].guid;
-    clone.querySelector(".inner_details .norway").src = norway;
+    //    const denmark = game.languages[0].guid;
+    //    clone.querySelector(".inner_details .denmark").src = denmark;
+    //    const germany = game.languages[1].guid;
+    //    clone.querySelector(".inner_details .germany").src = germany;
+    //    const norway = game.languages[2].guid;
+    //    clone.querySelector(".inner_details .norway").src = norway;
     /// rest of the flags later
     const fileSize = clone.querySelector(".file_size");
     fileSize.textContent = game.file_size;
@@ -59,6 +73,8 @@ function showGame(game) {
     players.textContent = game.players;
     const category = clone.querySelector(".category");
     category.textContent = game.genre;
+
+
 
     // append child
     document.querySelector("main").appendChild(clone);
