@@ -35,8 +35,8 @@ function showGame(game) {
     const clone = template.cloneNode(true);
 
     // populate with information
-    const images = game._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-    clone.querySelector("img").src = images;
+    const images = game._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    clone.querySelector(".header_container img").src = images;
     const h1 = clone.querySelector(".header_description h1");
     h1.textContent = game.title.rendered;
     const shortDescription = clone.querySelector(".header_description p");
@@ -48,6 +48,8 @@ function showGame(game) {
     clone.querySelector(".inner_details .denmark").src = denmark;
     const germany = game.languages[1].guid;
     clone.querySelector(".inner_details .germany").src = germany;
+    const norway = game.languages[2].guid;
+    clone.querySelector(".inner_details .norway").src = norway;
     /// rest of the flags later
     const fileSize = clone.querySelector(".file_size");
     fileSize.textContent = game.file_size;
