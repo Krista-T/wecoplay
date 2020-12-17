@@ -118,6 +118,11 @@
     overflow: hidden;
 }
 
+.box_container:hover {
+    transform: scale(1.1);
+   
+}
+
 .box_container h2 {
     font-size: 20px;
     text-align: center;

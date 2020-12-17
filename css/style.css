@@ -1,9 +1,16 @@
 /* main variables */
 :root {
     --bg-color: #f3f2f3;
-    --btn-green: #13a867;
-    --hero-filter: #f6c026;
+    /* --btn-green: #13a867; */
+    --accent-colour: #13a867;
+    --home-filter: #f6c026;
     --midsection-filter: #13a867;
+    --button-border-radius: 4px;
+
+    --headline-font: 'Poppins', sans-serif;
+    --copy-font: 'Nunito', sans-serif;
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
 }
 
 /* BACKGROUND HEADER */
@@ -11,14 +18,14 @@
 .background_image {
     background-size: cover;
     background-repeat: no-repeat;
-    background: var(--hero-filter);
+    background: var(--home-filter);
     padding: 30px 60px;
     padding-bottom: 0;
 }
 
 
 /* ALL BUTTONS SAME */
-.btn,
+/* .btn,
 .hero-btn button {
     border: none;
     outline: none;
@@ -34,11 +41,55 @@
 
 .hero-btn button {
     margin-bottom: 20px;
+} */
+/* .btn {
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    width: 290px;
+    padding: 4px;
+    cursor: pointer;
+    margin: 5px;
 }
 
-.btn:hover,
-button:hover {
-    transform: scale(1.1);
+.active {
+    background: var(--accent-colour) !important;
+} */
+
+.btn {
+    color: var( --secondary-text-color);
+    background: var(--accent-colour);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: none;
+    border: 1px solid var(--accent-colour);
+}
+
+.hero-btn button {
+    outline: none;
+    border: none;
+    padding: 8px 12px;
+    background: none;
+    border-radius: var(--button-border-radius);
+    width: 150px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.hero-btn button {
+    border: 1px solid var(--accent-colour);
+    color: white;
+}
+
+/* HOVER BTN HERE */
+
+.hero-btn button:hover {
+    background: var(--accent-colour);
+    color: white;
 }
 
 /* HERO SECTION*/
@@ -102,13 +153,18 @@ h3 {
     height: 300px;
     padding: 35px;
     margin: 50px auto;
-    /**CHANGE COLOR; ADD SHADOW FINAL DESIG?**/
-    background-color: #FFFFFF;
+    background-color:var( --bg-color);
     position: relative;
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
     -moz-box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
     box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
+}
+
+.card-one:hover,
+.card-two:hover,
+.card-three:hover {
+    transform: scale(1.1);
 }
 
 #card-container img {
@@ -148,6 +204,7 @@ h3 {
 
 #companies img {
     max-width: 50%;
+    margin: auto;
 }
 
 #companies h2 {
