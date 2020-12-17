@@ -24,7 +24,7 @@
 
 @media (min-width: 1400px) {
     .background_hero {
-        background: url("/img/single-game-bg-header.svg");
+        background: url("../img/single-game-bg-header.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 600px;

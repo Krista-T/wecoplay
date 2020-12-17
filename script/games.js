@@ -1,4 +1,4 @@
-let games = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?_embed&per_page=20&_fields[]=title&_fields[]=_links";
+let games = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?_embed&per_page=20&_fields=id,title,_links";
 
 window.addEventListener("DOMContentLoaded", getGames);
 
@@ -28,6 +28,9 @@ function retrieveSingleGame(gameDivision) {
     title.textContent = gameDivision.title.rendered;
     const images = gameDivision._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
     clone.querySelector("img").src = images;
+
+    const link = clone.querySelector("a");
+    link.href += gameDivision.id;
 
     // append child
     document.querySelector("main").appendChild(clone);
