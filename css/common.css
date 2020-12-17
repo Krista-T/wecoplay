@@ -64,7 +64,7 @@ nav li a {
 
 /* FOOTER */
 footer {
-    background-image: url("/img/footwave.svg");
+    background-image: url("../img/footwave.svg");
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -15px;
@@ -74,7 +74,6 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 #footer-container > div {
@@ -97,6 +96,16 @@ footer ul {
     list-style: none;
     padding: 0;
     font-size: 12px;
+}
+
+footer li a, 
+.some-icons a{
+    color: var(--main-text-color);
+}
+
+footer li a:visited, 
+.some-icons a:visited{
+    color: rgb(80, 79, 79);
 }
 
 footer .fa {
