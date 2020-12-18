@@ -14,11 +14,13 @@ function getData() {
         .then(res => res.json())
         .then(stuffReceived);
 
-    fetch(gamesInfo)
-        .then((res) => {
-            return res.json();
-        })
-        .then(cardsRetrieved);
+    setTimeout(function () {
+        fetch(gamesInfo)
+            .then((res) => {
+                return res.json();
+            })
+            .then(cardsRetrieved);
+    }, 200)
 
 }
 
