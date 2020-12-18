@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", getData);
 
-const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?filter[orderby]=rand&filter[per_page]=2&per_page=2&_embed";
+const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?per_page=2&filter[orderby]=rand&_embed";
 
 function getData() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -9,8 +9,8 @@ function getData() {
     console.log(the_game_id);
 
 
-    fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/25?_embed")
-        //        fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/" + the_game_id + "?_embed")
+    //    fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/25?_embed")
+    fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/" + the_game_id + "?_embed")
         .then(res => res.json())
         .then(stuffReceived);
 
@@ -65,7 +65,7 @@ function showGame(game) {
     const clone = template.cloneNode(true);
 
     // populate with information
-    const images = game._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const images = game._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
     clone.querySelector(".header_container img").src = images;
     const h1 = clone.querySelector(".header_description h1");
     h1.textContent = game.title.rendered;
@@ -83,13 +83,11 @@ function showGame(game) {
     const category = clone.querySelector(".category");
     category.textContent = game.genre;
 
-
-
     // append child
     document.querySelector("main").appendChild(clone);
 }
 
-// cards
+// fetched cards here
 function cardsRetrieved(stuff) {
     similarCards(stuff);
     createCards(stuff);
@@ -108,9 +106,16 @@ function createCards(card) {
 
         const section = document.createElement("section");
 
+        const link = document.createElement("a");
+        link.href = "single-game.html?page=";
+
+        const idlink = link;
+        link.href += c.id;
+
         section.appendChild(sim_img);
         section.appendChild(subtitle);
-        document.querySelector(".inner_similar_games").appendChild(section);
+        link.appendChild(section);
+        document.querySelector(".inner_similar_games").appendChild(link);
     })
 }
 
@@ -119,7 +124,6 @@ function similarCards(g) {
     const clone = template.cloneNode(true);
 
     // content
-
 
     // append child
     document.querySelector("main").appendChild(clone);
