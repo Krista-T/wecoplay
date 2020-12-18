@@ -91,27 +91,27 @@ function showGame(game) {
 
 // cards
 function cardsRetrieved(stuff) {
-//    handleData(stuff);
     similarCards(stuff);
     createCards(stuff);
 }
 
-//function handleData(games) {
-//    console.log("games?");
-//    console.log(games);
-//
-//    games.forEach(similarCards);
-//}
-
 function createCards(card) {
     console.log(card)
     console.log("here's my card")
-        card.forEach(c => {
-            const sim_img = document.createElement("img");
-            console.log(c);
-            sim_img.src = c._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-            document.querySelector(".inner_similar_games").appendChild(sim_img);
-        })
+    card.forEach(c => {
+        const sim_img = document.createElement("img");
+        console.log(c, "hey");
+        sim_img.src = c._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+
+        const subtitle = document.createElement("h3");
+        subtitle.textContent = c.title.rendered;
+
+        const section = document.createElement("section");
+
+        section.appendChild(sim_img);
+        section.appendChild(subtitle);
+        document.querySelector(".inner_similar_games").appendChild(section);
+    })
 }
 
 function similarCards(g) {
