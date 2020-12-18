@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", getData);
 
-const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?_embed&per_page=20";
+const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?_embed&per_page=2";
 
 function getData() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -8,22 +8,20 @@ function getData() {
     const the_game_id = urlParams.get("page");
     console.log(the_game_id);
 
-    if (true) {
-        fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/25?_embed")
-            //        fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/" + the_game_id + "?_embed")
-            .then(res => res.json())
-            .then(stuffReceived);
-    } else {
-        fetch(gamesInfo)
-            .then(res => res.json())
-            .then(handleData);
-    }
+
+    fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/25?_embed")
+        //        fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail/" + the_game_id + "?_embed")
+        .then(res => res.json())
+        .then(stuffReceived);
+
+    fetch(gamesInfo)
+        .then((res) => {
+            return res.json();
+        })
+        .then(cardsRetrieved);
+
 }
 
-function handleData(games) {
-    console.log("games?");
-    console.log(games);
-}
 
 function stuffReceived(stuff) {
     showGame(stuff);
@@ -85,6 +83,42 @@ function showGame(game) {
     const category = clone.querySelector(".category");
     category.textContent = game.genre;
 
+
+
+    // append child
+    document.querySelector("main").appendChild(clone);
+}
+
+// cards
+function cardsRetrieved(stuff) {
+//    handleData(stuff);
+    similarCards(stuff);
+    createCards(stuff);
+}
+
+//function handleData(games) {
+//    console.log("games?");
+//    console.log(games);
+//
+//    games.forEach(similarCards);
+//}
+
+function createCards(card) {
+    console.log(card)
+    console.log("here's my card")
+        card.forEach(c => {
+            const sim_img = document.createElement("img");
+            console.log(c);
+            sim_img.src = c._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+            document.querySelector(".inner_similar_games").appendChild(sim_img);
+        })
+}
+
+function similarCards(g) {
+    const template = document.querySelector("#similar_games").content;
+    const clone = template.cloneNode(true);
+
+    // content
 
 
     // append child
