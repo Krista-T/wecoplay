@@ -43,14 +43,21 @@ categories.forEach(category => {
         fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/categories")
             .then(res => res.json())
             .then(showCategory);
-        // console.log(category); 
-       
-    })
+            //triggers all btns
+         console.log(category); 
+         if(category.classList.contains("active")){
+                category.classList.remove("active")
+             }else{
+                 category.classList.add("active")  
+             }
+     });
+    
 
-    function showCategory(cat) {
-         console.log(cat);
-        cat.forEach(subject => {
-              console.log(subject.slug);         
+
+    function showCategory(subject) {
+        //  console.log(subject);
+        subject.forEach(cat => {
+              console.log(cat.slug);         
         })
        
     }
