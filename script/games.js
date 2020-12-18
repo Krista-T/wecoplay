@@ -37,30 +37,33 @@ function retrieveSingleGame(gameDivision) {
 
 //filters
 let categories = document.querySelectorAll(".categories button");
-
-categories.forEach(category => {
+console.log(categories);
+categories.forEach(btn => {
     addEventListener("click", () => {
         fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/categories")
             .then(res => res.json())
             .then(showCategory);
-            //triggers all btns
-         console.log(category); 
-         if(category.classList.contains("active")){
-                category.classList.remove("active")
-             }else{
-                 category.classList.add("active")  
-             }
-     });
-    
+
+        //triggers all btns
+        console.log(btn);
+
+        //  if(btn.classList.contains("active")){
+        //         btn.classList.remove("active")
+        //      }else{
+        //          btn.classList.add("active")  
+        //      }
+    });
+
 
 
     function showCategory(subject) {
-        //  console.log(subject);
+        console.log("Category listing");
         subject.forEach(cat => {
-              console.log(cat.slug);         
-        })
-       
+            //            console.log("Subject listener");
+
+            console.log(cat.slug);
+                })
+
     }
 
 });
-
