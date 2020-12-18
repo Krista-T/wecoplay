@@ -67,6 +67,8 @@ function showGame(game) {
     const clone = template.cloneNode(true);
 
     // populate with information
+    const header = game.header.guid;
+    clone.querySelector(".overlay img").src = header;
     const images = game._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
     clone.querySelector(".header_container img").src = images;
     const h1 = clone.querySelector(".header_description h1");
