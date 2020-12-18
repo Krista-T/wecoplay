@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", getData);
 
-const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?_embed&per_page=2";
+const gamesInfo = "https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/page_detail?filter[orderby]=rand&filter[per_page]=2&per_page=2&_embed";
 
 function getData() {
     const urlParams = new URLSearchParams(window.location.search);
