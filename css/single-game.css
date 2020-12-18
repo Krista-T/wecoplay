@@ -7,6 +7,7 @@
 .background_hero {
     background: var(--background-colour);
     padding: 20px;
+    padding-bottom: 0;
 }
 
 .btn {
@@ -38,6 +39,7 @@ img.bg {
     font-weight: 900;
     font-family: var(--headline-font);
     margin-bottom: 0;
+    line-height: 20px;
 }
 
 .details {
@@ -80,6 +82,14 @@ table th {
     text-align: left;
 }
 
+/* FEATURES */
+h2 {
+    text-align: center;
+    font-family: var(--headline-font);
+}
+
+
+/* MEDIA QUERIES */
 @media (min-width: 1300px) {
     .details {
         max-width: 1000px;
@@ -117,9 +127,8 @@ table th {
 @media (min-width: 1400px) {
     img.bg {
         display: block;
-        clip-path: url(#svgPath);
         position: absolute;
-        width: 100vw;
+        width: 100%;
         top: 0;
         left: 0;
         z-index: -10px;
@@ -128,6 +137,8 @@ table th {
 
     .background_hero {
         background: none;
+        padding: 30px 60px;
+        padding-bottom: 0;
     }
 
 
