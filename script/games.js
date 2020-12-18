@@ -24,6 +24,9 @@ function retrieveSingleGame(gameDivision) {
     const template = document.querySelector("#games").content;
     const clone = template.cloneNode(true);
 
+    //add categories to games so filters work
+    clone.querySelector('.box_container').classList.add(gameDivision._embedded["wp:term"][0][0].slug);
+
     const title = clone.querySelector("h2");
     title.textContent = gameDivision.title.rendered;
     const images = gameDivision._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
@@ -36,35 +39,28 @@ function retrieveSingleGame(gameDivision) {
 
 
 //filters
-let categories = document.querySelectorAll(".categories button");
-console.log(categories);
-categories.forEach(btn => {
-    addEventListener("click", () => {
-        fetch("https://mariajalmeida.com/KEA/2nd_semester/weco_play/wp-json/wp/v2/categories")
-            .then(res => res.json())
-            .then(showCategory);
+const categories = document.querySelectorAll(".categories button");
+// console.log("categories")
+categories.forEach(btn => btn.addEventListener('click', filterData));
 
-        //triggers all btns
-        
-        console.log(btn);
+//FILTERING WORKS
+function filterData(e) {
+  // console.log(e.target.id);
+  const clicked = e.target.id;
+  const allBoxes = document.querySelectorAll('.box_container');
+  //  console.log(allBoxes);
 
-        //  if(btn.classList.contains("active")){
-        //         btn.classList.remove("active")
-        //      }else{
-        //          btn.classList.add("active")  
-        //      }
-    });
-
-
-
-    function showCategory(subject) {
-        console.log("Category listing");
-        subject.forEach(cat => {
-            //            console.log("Subject listener");
-
-            console.log(cat.slug);
-                })
-
+  allBoxes.forEach((box) => {
+    //  console.log(box[1])
+    // console.log(e.target.id);
+    if (box.classList[1] == clicked) {
+    console.log("all")
+   box.classList.remove("hide");
+    }else {
+        box.classList.add("hide")
     }
-
-});
+  });
+ 
+}
+  
+  
