@@ -26,6 +26,10 @@
     padding: 20px;
 }
 
+img.bg {
+    display: none;
+}
+
 .header_container {
     color: white;
 }
@@ -97,20 +101,35 @@ table th {
         flex-wrap: wrap;
     }
 
+    header {
+        z-index: 10;
+        position: relative;
+    }
+
     .header_container {
         margin: 40px;
+        z-index: 10;
+        position: relative;
     }
+
 }
 
 @media (min-width: 1400px) {
-    .background_hero {
-        background: url("../img/single-game-bg-header.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 600px;
-        padding: 30px 60px;
-        padding-bottom: 0;
+    img.bg {
+        display: block;
+        clip-path: url(#svgPath);
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: -10px;
     }
+
+
+    .background_hero {
+        background: none;
+    }
+
 
     .header_container > div:first-child {
         max-width: none;
