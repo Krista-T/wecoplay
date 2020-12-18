@@ -24,8 +24,7 @@
 /* BOTTOM HEADER */
 .header_container,
 .details,
-.game_caps,
-.features {
+.game_caps {
     padding: 20px;
 }
 
@@ -112,6 +111,12 @@ p {
 }
 
 /* FEATURES */
+.features,
+.similar_games {
+    margin: 20px;
+    margin-top: 35px;
+}
+
 .inner_features {
     padding: 20px;
     display: flex;
@@ -129,6 +134,10 @@ p {
 }
 
 /* SIMILAR GAMES */
+
+.similar_games {
+    padding-top: 0;
+}
 
 .inner_similar_games {
     display: flex;
@@ -194,7 +203,7 @@ section {
     }
 
     .inner_features {
-        margin: 30px auto;
+        margin: 10px auto;
         max-width: 800px;
     }
 
