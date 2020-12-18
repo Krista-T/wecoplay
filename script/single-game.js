@@ -28,20 +28,38 @@ function handleData(games) {
 function stuffReceived(stuff) {
     showGame(stuff);
     createImages(stuff);
+    createFeatures(stuff);
+    createIngame(stuff);
 }
 
+// here's the flags
 function createImages(lan) {
-    console.log(lan);
-    console.log("languages here");
     lan.languages.forEach((lang) => {
-        console.log(lang.guid);
-        console.log("here it is");
         const lan_img = document.createElement("img");
         lan_img.src = lang.guid;
         document.querySelector(".languages").appendChild(lan_img);
     })
 }
 
+// here's the in-game images
+function createIngame(ingame) {
+    ingame.ingame_screenshots.forEach((cap) => {
+        const cap_image = document.createElement("img");
+        cap_image.src = cap.guid;
+        document.querySelector(".game_caps").appendChild(cap_image);
+    })
+}
+
+// here's weco's guaranteed features
+function createFeatures(ft) {
+    ft.features.forEach(feature => {
+        const weco_feature = document.createElement("p");
+        weco_feature.textContent = feature.post_title;
+        document.querySelector(".inner_features").appendChild(weco_feature);
+    })
+}
+
+// here's most of the fetched page
 function showGame(game) {
     console.log(game);
 
@@ -58,13 +76,6 @@ function showGame(game) {
 
     const longDescription = clone.querySelector(".long_description p");
     longDescription.innerHTML = game.content.rendered;
-    //    const denmark = game.languages[0].guid;
-    //    clone.querySelector(".inner_details .denmark").src = denmark;
-    //    const germany = game.languages[1].guid;
-    //    clone.querySelector(".inner_details .germany").src = germany;
-    //    const norway = game.languages[2].guid;
-    //    clone.querySelector(".inner_details .norway").src = norway;
-    /// rest of the flags later
     const fileSize = clone.querySelector(".file_size");
     fileSize.textContent = game.file_size;
     const releaseDate = clone.querySelector(".release_date");
