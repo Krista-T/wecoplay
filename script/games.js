@@ -45,6 +45,7 @@ categories.forEach(btn => {
             .then(showCategory);
 
         //triggers all btns
+        
         console.log(btn);
 
         //  if(btn.classList.contains("active")){
