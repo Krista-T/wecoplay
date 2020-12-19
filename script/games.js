@@ -39,18 +39,32 @@ function retrieveSingleGame(gameDivision) {
 
 
 
-//filters
+//EVENT FOR FILTERS
 const categories = document.querySelectorAll(".categories button");
 // console.log("categories")
-categories.forEach(btn => btn.addEventListener('click', filterData));
+categories.forEach(button => button.addEventListener('click', filterData));
 
 //FILTERING WORKS
 function filterData(e) {
-  // console.log(e.target.id);
+    //  console.log(e.target);
   const clicked = e.target.id;
+  // console.log(clicked)
+
+  //toggle active class
+    //   console.log(e.target.id)
+     categories.forEach((btn) => {
+         console.log(btn.id)
+          if(btn.id == e.target.id) {
+              btn.classList.add("active");
+          }else {
+             btn.classList.remove("active");
+          }
+     })
+  
+
+    //Filter games
   const allBoxes = document.querySelectorAll('.box_container');
   //  console.log(allBoxes);
-
   allBoxes.forEach((box) => {
     //  console.log(box[1])
     // console.log(e.target.id);
@@ -61,15 +75,14 @@ function filterData(e) {
         box.classList.add("hide")
     }
 
+    //showAll
     const btnAll = document.querySelector("#all");
     btnAll.addEventListener("click", showAll);
     function showAll() {
-      box.classList.remove("hide")
-          console.log("showingAll")      
+    box.classList.remove("hide")
+      //console.log("showingAll")      
   }
-
   });
- 
 }
   
   
