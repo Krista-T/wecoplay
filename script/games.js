@@ -13,6 +13,7 @@ function getGames() {
 function processData(data) {
     // console.log("here are the games");
     //  console.log(data);
+    data.reverse();
     data.forEach(retrieveSingleGame);
 }
 
@@ -34,8 +35,8 @@ function retrieveSingleGame(gameDivision) {
 
     // append child
     document.querySelector("main").appendChild(clone);
-
 }
+
 
 
 //filters
@@ -54,11 +55,19 @@ function filterData(e) {
     //  console.log(box[1])
     // console.log(e.target.id);
     if (box.classList[1] == clicked) {
-    console.log("all")
+        // console.log(box)
    box.classList.remove("hide");
-    }else {
+    } else {
         box.classList.add("hide")
     }
+
+    const btnAll = document.querySelector("#all");
+    btnAll.addEventListener("click", showAll);
+    function showAll() {
+      box.classList.remove("hide")
+          console.log("showingAll")      
+  }
+
   });
  
 }
