@@ -5,6 +5,8 @@
 
     --headline-font: 'Poppins', sans-serif;
     --copy-font: 'Nunito', sans-serif;
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
 }
 
 /* HEADER */
@@ -31,6 +33,7 @@
 .btn {
     background: var(--accent-colour);
     cursor: pointer;
+    border-radius: var(--button-border-radius);
 }
 
 .btn:hover {

@@ -89,7 +89,7 @@ footer {
 
 #footer-container {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     flex-wrap: wrap;
 }
 
@@ -118,6 +118,7 @@ footer ul {
 footer li a, 
 .some-icons a{
     color: var(--main-text-color);
+   
 }
 
 footer li a:visited, 
@@ -125,7 +126,9 @@ footer li a:visited,
     color: rgb(80, 79, 79);
 }
 
-footer .fa {
+footer .fa, 
+footer .fab {
+    color: var(--main-text-color);
     font-size: 18px;
     margin-right: 10px;
 }
@@ -143,7 +146,7 @@ footer .fa {
         font-size: 16px;
     }
 
-    footer .fa {
+    footer .fa, footer .fab {
         font-size: 24px;
     }
 

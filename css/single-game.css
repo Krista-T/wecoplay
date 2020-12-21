@@ -2,6 +2,13 @@
     --background-colour: #13A867;
     --accent-colour: #F2A71B;
     --light-version: #E8FFF2;
+
+    --button-border-radius: 4px;
+
+    --headline-font: 'Poppins', sans-serif;
+    --copy-font: 'Nunito', sans-serif;
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
 }
 
 .background_hero {
@@ -14,6 +21,7 @@
     color: white;
     background: var(--accent-colour);
     cursor: pointer;
+    border-radius: var(--button-border-radius);
 }
 
 .btn:hover {
