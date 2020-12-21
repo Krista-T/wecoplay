@@ -14,7 +14,6 @@
 }
 
 
-
 /*LOADER*/
 #loader-dots span{
    background-color:var(--accent-colour);
@@ -204,10 +203,9 @@ h3 {
     .background_image {
         background: url("../img/hero-img.svg"); 
         background-repeat: no-repeat;
-        background-size: cover;
-        height: 850px;
-        margin-bottom: 100px;
-    
+        background-size:cover;
+        height: 650px;
+        margin-bottom: 100px; 
     } 
 
     .hero img {
@@ -219,6 +217,7 @@ h3 {
         background-image: url("../img/home-midbck-img.svg");
         background-repeat: no-repeat;
         background-size: cover;
+        
     }
 }
 
