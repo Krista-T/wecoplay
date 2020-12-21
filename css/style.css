@@ -16,27 +16,27 @@
 
 
 /*LOADER*/
-#loader-dots span{
-   background-color:var(--accent-colour);
-  }
+#loader-dots span {
+    background-color: var(--accent-colour);
+}
 
 /* BACKGROUND HEADER */
-.background_image {
-    background-size: cover;
+/*.background_image {
+    background-size: 100%;
     background-repeat: no-repeat;
     background: var(--home-filter);
     padding: 30px 60px;
     padding-bottom: 0;
-}
+}*/
 
-  nav li a:hover {
-    color:var(--accent-colour);
+nav li a:hover {
+    color: var(--accent-colour);
     transition: color .8s;
-} 
+}
 
 
 .btn {
-    color: var( --secondary-text-color);
+    color: var(--secondary-text-color);
     background: var(--accent-colour);
     cursor: pointer;
     border-radius: var(--button-border-radius);
@@ -132,7 +132,7 @@ h3 {
     height: 300px;
     padding: 35px;
     margin: 50px auto;
-    background-color:var( --bg-color);
+    background-color: var(--bg-color);
     position: relative;
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
@@ -202,13 +202,19 @@ h3 {
 
 @media (min-width: 1053px) {
     .background_image {
+        background: url("../img/hero-img.svg");
+        height: 40%;
+    }
+
+    /*
+    .background_image {
         background: url("../img/hero-img.svg"); 
         background-repeat: no-repeat;
         background-size: cover;
         height: 850px;
         margin-bottom: 100px;
     
-    } 
+    } */
 
     .hero img {
         position: relative;
