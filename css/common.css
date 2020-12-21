@@ -9,6 +9,7 @@
     --copy-font: 'Nunito', sans-serif;
     --main-text-color: #000;
     --secondary-text-color: #fff;
+    --bg-color-loader: #f3f2f3;
 
 
 }
@@ -22,6 +23,7 @@ img {
     width: 100%;
     height: auto;
     display: flex;
+   
 }
 
 * {
@@ -66,12 +68,18 @@ nav li a {
 }
 
 /*LOADER*/
+
+
 .load {
     position: absolute;
     z-index: 10;
-    left: 50%;
-    margin-left: -50px;
-
+    background-color: var(  --bg-color-loader);
+    width: 100vw;
+    height: 100vw;
+    
+}
+#loader-dots {
+   margin-left: 46%;
 }
 
 #loader-dots span {
@@ -81,6 +89,7 @@ nav li a {
     border-radius: 100%;
     margin: 250px 5px;
     opacity: 0;
+      
 }
 
 #loader-dots span:nth-child(1) {
