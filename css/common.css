@@ -68,16 +68,11 @@ nav li a {
     color: var(--secondary-text-color);
     font-weight: bolder; 
   
-   
 }
 
-/* NAVIGATION ON HOVER */
+/* NAVIGATION ON HOVER in their own pages styled */
 
- nav li a:hover {
-    /* color: #AB191A; */
-    color: #75be9d;
-    transition: color .8s;
-}
+
 
 /* FOOTER */
 footer {
@@ -89,7 +84,7 @@ footer {
 
 #footer-container {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     flex-wrap: wrap;
 }
 
@@ -117,15 +112,19 @@ footer ul {
 
 footer li a, 
 .some-icons a{
-    color: var(--main-text-color);
+    color: var(--main-text-color); 
+    text-decoration: none;
+   
 }
 
 footer li a:visited, 
 .some-icons a:visited{
-    color: rgb(80, 79, 79);
+    color: rgb(61, 61, 61); 
 }
 
-footer .fa {
+footer .fa, 
+footer  .fab {
+    color: var(--main-text-color); 
     font-size: 18px;
     margin-right: 10px;
 }
@@ -143,7 +142,7 @@ footer .fa {
         font-size: 16px;
     }
 
-    footer .fa {
+    footer .fa, footer .fab {
         font-size: 24px;
     }
 

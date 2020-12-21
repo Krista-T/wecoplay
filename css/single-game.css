@@ -2,6 +2,13 @@
     --background-colour: #13A867;
     --accent-colour: #F2A71B;
     --light-version: #E8FFF2;
+
+    --button-border-radius: 4px;
+
+    --headline-font: 'Poppins', sans-serif;
+    --copy-font: 'Nunito', sans-serif;
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
 }
 
 .background_hero {
@@ -10,10 +17,17 @@
     padding-bottom: 0;
 }
 
+nav li a:hover {
+    color: var(--accent-colour);
+    transition: color .8s;
+} 
+
+
 .btn {
     color: white;
     background: var(--accent-colour);
     cursor: pointer;
+    border-radius: var(--button-border-radius);
 }
 
 .btn:hover {
@@ -139,10 +153,12 @@ p {
     padding-top: 0;
 }
 
+
 .inner_similar_games {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    
 }
 
 section {
@@ -151,7 +167,9 @@ section {
     overflow: hidden;
     margin: 20px;
     margin-top: 0;
+   
 }
+
 
 .inner_similar_games h3 {
     font-size: 20px;
@@ -161,11 +179,16 @@ section {
     padding: 10px;
 }
 
+
 .inner_similar_games img {
     width: 300px;
     margin-top: 0;
     background: #2F18F5;
     border-radius: 5px 5px 0 0;
+}
+
+.inner_similar_games a:hover{
+    transform: scale(1.1);
 }
 
 /* MEDIA QUERIES */
@@ -217,8 +240,9 @@ section {
     img.bg {
         display: block;
         position: absolute;
-        width: 100%;
-        top: 0;
+        width: 100vw;
+        height: auto;
+        margin-top: -150px;
         left: 0;
         z-index: -10px;
     }

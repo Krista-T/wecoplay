@@ -25,7 +25,8 @@ function retrieveSingleGame(gameDivision) {
     const template = document.querySelector("#games").content;
     const clone = template.cloneNode(true);
 
-    //add categories to games so filters work
+
+    //add categories to games for filtering filters 
     clone.querySelector('.box_container').classList.add(gameDivision._embedded["wp:term"][0][0].slug);
 
     const title = clone.querySelector("h2");
@@ -44,48 +45,31 @@ function retrieveSingleGame(gameDivision) {
 
 //EVENT FOR FILTERS
 const categories = document.querySelectorAll(".categories button");
-// console.log("categories")
 categories.forEach(button => button.addEventListener('click', filterData));
-
-//FILTERING WORKS
+//Class active
 function filterData(e) {
-    //  console.log(e.target);
-  const clicked = e.target.id;
-  // console.log(clicked)
-
-  //toggle active class
-    //   console.log(e.target.id)
-     categories.forEach((btn) => {
-         console.log(btn.id)
-          if(btn.id == e.target.id) {
-              btn.classList.add("active");
-          }else {
-             btn.classList.remove("active");
-          }
-     })
-  
-
+    const clicked = e.target.id;
+    categories.forEach((btn) => {
+        if (btn.id == clicked) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    })
     //Filter games
-  const allBoxes = document.querySelectorAll('.box_container');
-  //  console.log(allBoxes);
-  allBoxes.forEach((box) => {
-    //  console.log(box[1])
-    // console.log(e.target.id);
-    if (box.classList[1] == clicked) {
-        // console.log(box)
-   box.classList.remove("hide");
-    } else {
-        box.classList.add("hide")
-    }
+    const allBoxes = document.querySelectorAll('.box_container');
+    allBoxes.forEach((box) => {
+        if (box.classList[1] == clicked) {
+            box.classList.remove("hide");
+        } else {
+            box.classList.add("hide")
+        }
+    //     //showAll
+        const btnAll = document.querySelector("#all");
+        btnAll.addEventListener("click", showAll);
 
-    //showAll
-    const btnAll = document.querySelector("#all");
-    btnAll.addEventListener("click", showAll);
-    function showAll() {
-    box.classList.remove("hide")
-      //console.log("showingAll")      
-  }
-  });
+        function showAll() {
+            box.classList.remove("hide")
+        }
+    });
 }
-  
-  

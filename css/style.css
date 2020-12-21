@@ -23,44 +23,17 @@
     padding-bottom: 0;
 }
 
+  nav li a:hover {
+    color:var(--accent-colour);
+    transition: color .8s;
+} 
 
-/* ALL BUTTONS SAME */
-/* .btn,
-.hero-btn button {
-    border: none;
-    outline: none;
-    background-color: var(--btn-green);
-    color: var(--secondary-text-color);
-    font-size: var(--font-size-button);
-    font-weight: bolder;
-    padding: 8px 12px;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.hero-btn button {
-    margin-bottom: 20px;
-} */
-/* .btn {
-    outline: none;
-    border: none;
-    background: none;
-    color: white;
-    width: 290px;
-    padding: 4px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.active {
-    background: var(--accent-colour) !important;
-} */
 
 .btn {
     color: var( --secondary-text-color);
     background: var(--accent-colour);
     cursor: pointer;
+    border-radius: var(--button-border-radius);
 }
 
 .btn:hover {
@@ -161,11 +134,6 @@ h3 {
     box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
 }
 
-.card-one:hover,
-.card-two:hover,
-.card-three:hover {
-    transform: scale(1.1);
-}
 
 #card-container img {
     max-width: 60px;
@@ -201,7 +169,6 @@ h3 {
 }
 
 /* COMPANIES SECTION */
-
 #companies img {
     max-width: 50%;
     margin: auto;
@@ -229,12 +196,13 @@ h3 {
 
 @media (min-width: 1053px) {
     .background_image {
-        background: url("../img/hero-img.svg");
+        background: url("../img/hero-img.svg"); 
         background-repeat: no-repeat;
         background-size: cover;
-        height: 640px;
+        height: 850px;
         margin-bottom: 100px;
-    }
+    
+    } 
 
     .hero img {
         position: relative;

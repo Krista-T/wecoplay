@@ -5,6 +5,8 @@
 
     --headline-font: 'Poppins', sans-serif;
     --copy-font: 'Nunito', sans-serif;
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
 }
 
 /* HEADER */
@@ -25,12 +27,18 @@
 
 .header_container img,
 .inner_box {
-    max-width: 566px;
+    max-width: 660px;
 }
+
+nav li a:hover {
+    color: var(--accent-colour);
+    transition: color .8s;
+} 
 
 .btn {
     background: var(--accent-colour);
     cursor: pointer;
+    border-radius: var(--button-border-radius);
 }
 
 .btn:hover {
@@ -142,10 +150,10 @@
 
 @media (min-width: 1400px) {
     .background_hero {
-        background: url("../img/games_bg_header.svg");
+        background: url("../img/games_bg_header.svg"); 
         background-repeat: no-repeat;
         background-size: cover;
-        height: 600px;
+        height: 850px;
     }
 }
 
