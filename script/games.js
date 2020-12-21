@@ -42,7 +42,6 @@ function retrieveSingleGame(gameDivision) {
 }
 
 
-
 //EVENT FOR FILTERS
 const categories = document.querySelectorAll(".categories button");
 categories.forEach(button => button.addEventListener('click', filterData));
@@ -73,3 +72,4 @@ function filterData(e) {
         }
     });
 }
+

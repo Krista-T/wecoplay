@@ -13,8 +13,14 @@
     --secondary-text-color: #fff;
 }
 
-/* BACKGROUND HEADER */
 
+
+/*LOADER*/
+#loader-dots span{
+   background-color:var(--accent-colour);
+  }
+
+/* BACKGROUND HEADER */
 .background_image {
     background-size: cover;
     background-repeat: no-repeat;

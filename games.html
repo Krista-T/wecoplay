@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="description"
-    content="Learning games for primary schools. 
+    <meta name="description" content="Learning games for primary schools. 
         Language learning games, math learning games, logical learning games, art games, physical activiti for kids.">
     <title>eLearning Games</title>
     <script src="https://kit.fontawesome.com/62614983e3.js" crossorigin="anonymous"></script>
@@ -15,10 +14,19 @@
 </head>
 
 <body>
+
+    <!-- LOADER -->
+    <div class="load">
+        <div id="loader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <div class="background_hero">
         <header>
             <div class="logo">
-                <img src="img/wecoplay_logo_white.svg" alt="white-logo">
+                <img src="img/wecoplay_logo_white.svg" alt="white-logo" loading="lazy">
             </div>
             <nav>
                 <ul>
@@ -32,7 +40,7 @@
             </nav>
         </header>
         <div class="header_container">
-            <img src="img/games_header.png">
+            <img src="img/games_header.png" loading="lazy">
             <div class="inner_box">
                 <h1>Everything in one neat package</h1>
                 <p>All purchases give you full access to all of our games, updates and all the new yearly releases.</p>
@@ -70,7 +78,7 @@
     <footer>
         <div id="footer-container">
             <div class="adress">
-                <img src="img/wecoplay_logo.svg" alt="logo">
+                <img src="img/wecoplay_logo.svg" alt="logo" loading="lazy">
                 <ul>
                     <li><b>Weco Play IVS</b>,</li>
                     <li>Gudrunsvej 78, 3. sal</li>
@@ -86,7 +94,8 @@
                             hello@wecoplay.com</a></li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i>
                         +45 93930072</li>
-                        <li><i class="fab fa-facebook-messenger" aria-hidden="true"></i><a href="http://m.me/WECOPLAY" target="_blank">
+                    <li><i class="fab fa-facebook-messenger" aria-hidden="true"></i><a href="http://m.me/WECOPLAY"
+                            target="_blank">
                             messenger</a></li>
                 </ul>
             </div>
@@ -102,7 +111,12 @@
         </div>
         <p>&copy2020 WECO PLAY</p>
     </footer>
-
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector("#loader-dots").style.display = "none";
+            console.log("load");
+        });
+    </script>
     <script src="script/games.js"></script>
 </body>
 

@@ -15,12 +15,21 @@
 </head>
 
 <body>
+    <!-- LOADER -->
+    <div class="load">
+        <div id="loader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
     <!-- NAV SECTION -->
     <div class="background_image">
         <div class="container">
             <header>
                 <div class="logo">
-                    <img src="img/wecoplay_logo_white.svg" alt="white-logo">
+                    <img src="img/wecoplay_logo_white.svg" alt="white-logo" loading="lazy">
                 </div>
                 <nav>
                     <ul>
@@ -45,7 +54,7 @@
                     </div>
                 </div>
                 <div class="hero">
-                    <img src="img/header-img.jpg" alt="children playing">
+                    <img src="img/header-img.jpg" alt="children playing" loading="lazy">
                 </div>
             </section>
         </div>
@@ -55,19 +64,19 @@
     <h2>our games facilitate</h2>
     <section id="card-container">
         <div class="card-one">
-            <img src="img/collaborative_play.svg" alt="icon">
+            <img src="img/collaborative_play.svg" alt="icon" loading="lazy">
             <h3>Collaborative Play</h3>
             <p>Face-to-face play with the screen as a shared focus is a completely different learning experience. The
                 kids will improve team work, social as well as fine motor skills and coordination.</p>
         </div>
         <div class="card-two">
-            <img src="img/relevant_learning.png">
+            <img src="img/relevant_learning.png" loading="lazy">
             <h3>Relevant Learning</h3>
             <p>Our games draw on a wide range of skills, pertaining to math, language, art, story telling and logic
                 thinking, applicable in all classes.</p>
         </div>
         <div class="card-three">
-            <img src="img/scalable_difficulty.png">
+            <img src="img/scalable_difficulty.png" loading="lazy">
             <h3>Scalable difficulty</h3>
             <p>Game settings can easily be adjusted so the level of difficulty will scale to and match any age or level
                 of mastery from kindergarten to primary school.</p>
@@ -92,24 +101,24 @@
     <section id="companies">
         <h2>Happy Clients:</h2>
         <ul class="first-row">
-            <li><img src="./img/hjorning.svg" alt="logo"></li>
-            <li><img src="./img/aarhus.svg" alt="logo"></li>
-            <li><img src="./img/dokkx.svg" alt=""></li>
-            <li><img src="./img/lilleskole.svg" alt="logo"></li>
+            <li><img src="./img/hjorning.svg" alt="logo" loading="lazy"></li>
+            <li><img src="./img/aarhus.svg" alt="logo" loading="lazy"></li>
+            <li><img src="./img/dokkx.svg" alt="logo" loading="lazy"></li>
+            <li><img src="./img/lilleskole.svg" alt="logo" loading="lazy"></li>
         </ul>
 
         <ul class="second-row">
-            <li><img src="./img/freinetskolen.svg" alt="logo"></li>
-            <li><img src="./img/risbjerg.svg" alt="logo"></li>
-            <li><img src="./img/viborg.svg" alt=""></li>
-            <li><img src="./img/stu.svg" alt="logo"></li>
+            <li><img src="./img/freinetskolen.svg" alt="logo" loading="lazy"></li>
+            <li><img src="./img/risbjerg.svg" alt="logo" loading="lazy"></li>
+            <li><img src="./img/viborg.svg" alt="logo" loading="lazy"></li>
+            <li><img src="./img/stu.svg" alt="logo" loading="lazy"></li>
         </ul>
     </section>
 
     <footer>
         <div id="footer-container">
             <div class="adress">
-                <img src="img/wecoplay_logo.svg" alt="logo">
+                <img src="img/wecoplay_logo.svg" alt="logo" loading="lazy">
                 <ul>
                     <li><b>Weco Play IVS</b>,</li>
                     <li>Gudrunsvej 78, 3. sal</li>
@@ -143,5 +152,10 @@
         <p>&copy2020 WECO PLAY</p>
     </footer>
 </body>
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector("#loader-dots").style.display = "none";
+    });
+</script>
 
 </html>

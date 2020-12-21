@@ -9,6 +9,12 @@
     --secondary-text-color: #fff;
 }
 
+
+/*LOADER*/
+#loader-dots span {
+    background-color: var(--accent-colour);
+}
+
 /* HEADER */
 .background_hero {
     background: var(--background-colour);
@@ -33,7 +39,7 @@
 nav li a:hover {
     color: var(--accent-colour);
     transition: color .8s;
-} 
+}
 
 .btn {
     background: var(--accent-colour);
@@ -134,7 +140,7 @@ nav li a:hover {
 
 .box_container:hover {
     transform: scale(1.1);
-   
+
 }
 
 .box_container h2 {
@@ -150,7 +156,7 @@ nav li a:hover {
 
 @media (min-width: 1400px) {
     .background_hero {
-        background: url("../img/games_bg_header.svg"); 
+        background: url("../img/games_bg_header.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 850px;
