@@ -23,6 +23,11 @@
     padding-bottom: 0;
 }
 
+  nav li a:hover {
+    color:var(--accent-colour);
+    transition: color .8s;
+} 
+
 
 .btn {
     color: var( --secondary-text-color);
@@ -129,11 +134,6 @@ h3 {
     box-shadow: 0px 0px 7px 0px rgba(140, 140, 140, 1);
 }
 
-/* .card-one:hover,
-.card-two:hover,
-.card-three:hover {
-    transform: scale(1.1);
-} */
 
 #card-container img {
     max-width: 60px;

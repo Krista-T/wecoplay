@@ -68,16 +68,11 @@ nav li a {
     color: var(--secondary-text-color);
     font-weight: bolder; 
   
-   
 }
 
-/* NAVIGATION ON HOVER */
+/* NAVIGATION ON HOVER in their own pages styled */
 
- nav li a:hover {
-    /* color: #AB191A; */
-    color: #75be9d;
-    transition: color .8s;
-}
+
 
 /* FOOTER */
 footer {
