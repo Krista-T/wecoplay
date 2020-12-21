@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="description"
-    content="Learning games for primary schools. 
+    <meta name="description" content="Learning games for primary schools. 
         Language learning games, math learning games, logical learning games, art games, physical activiti for kids.">
     <title>Alphabet Monster</title>
     <link rel="stylesheet" href="css/single-game.css">
@@ -15,15 +14,23 @@
 </head>
 
 <body>
+    <!-- LOADER -->
+    <div class="load">
+        <div id="loader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <main></main>
     <template id="single_game">
         <div class="background_hero">
             <div class="overlay">
-                <img src="img/single-game-header.svg" class="bg">
+                <img src="img/single-game-header.svg" class="bg" loading="lazy">
             </div>
             <header>
                 <div class="logo">
-                    <img src="img/wecoplay_logo_white.svg" alt="white-logo">
+                    <img src="img/wecoplay_logo_white.svg" alt="white-logo" loading="lazy">
                 </div>
                 <nav>
                     <ul>
@@ -38,7 +45,7 @@
             </header>
             <div class="header_container">
                 <div class="top_hero">
-                    <img src="./img/games_header.png" alt ="img">
+                    <img src="./img/games_header.png" alt="img">
                 </div>
                 <div class="header_description">
                     <h1></h1>
@@ -110,12 +117,13 @@
                 <h4>get in touch</h4>
                 <ul>
                     <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:hello@wecoplay.com"
-                        target="_blank">
-                        hello@wecoplay.com</a></li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i>
-                    +45 93930072</li>
-                    <li><i class="fab fa-facebook-messenger" aria-hidden="true"></i><a href="http://m.me/WECOPLAY" target="_blank">
-                        messenger</a></li>
+                            target="_blank">
+                            hello@wecoplay.com</a></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>
+                        +45 93930072</li>
+                    <li><i class="fab fa-facebook-messenger" aria-hidden="true"></i><a href="http://m.me/WECOPLAY"
+                            target="_blank">
+                            messenger</a></li>
                 </ul>
             </div>
             <div class="some-icons">
@@ -130,6 +138,12 @@
         </div>
         <p>&copy2020 WECO PLAY</p>
     </footer>
+    <script>
+        window.addEventListener("load", () => {
+            document.querySelector("#loader-dots").style.display = "none";
+            console.log("loading");
+        });
+    </script>
     <script src="script/single-game.js"></script>
 </body>
 
