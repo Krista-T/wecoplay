@@ -117,18 +117,19 @@ footer ul {
 
 footer li a, 
 .some-icons a{
-    color: var(--main-text-color);
+    color: var(--main-text-color); 
+    text-decoration: none;
    
 }
 
 footer li a:visited, 
 .some-icons a:visited{
-    color: rgb(80, 79, 79);
+    color: rgb(61, 61, 61); 
 }
 
 footer .fa, 
-footer .fab {
-    color: var(--main-text-color);
+footer  .fab {
+    color: var(--main-text-color); 
     font-size: 18px;
     margin-right: 10px;
 }

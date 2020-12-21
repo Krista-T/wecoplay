@@ -27,7 +27,7 @@
 
 .header_container img,
 .inner_box {
-    max-width: 566px;
+    max-width: 660px;
 }
 
 .btn {
@@ -145,10 +145,10 @@
 
 @media (min-width: 1400px) {
     .background_hero {
-        background: url("../img/games_bg_header.svg");
+        background: url("../img/games_bg_header.svg"); 
         background-repeat: no-repeat;
         background-size: cover;
-        height: 600px;
+        height: 850px;
     }
 }
 
