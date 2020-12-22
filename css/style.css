@@ -208,6 +208,10 @@ h3 {
         margin-bottom: 100px; 
     } 
 
+    .hero-btn {
+        display: flex;
+    }
+
     .hero img {
         position: relative;
         bottom: -100px;
